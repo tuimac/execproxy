@@ -9,6 +9,7 @@ WORKDIR /root
 
 ADD requirements.txt /root/requirements.txt
 ADD bashrc /root/.bashrc
+ADD entrypoint.sh /root/entrypoint.sh
 
 RUN apk update && \
     apk upgrade && \
@@ -24,3 +25,5 @@ RUN apk update && \
     cd /root/execproxy && \
     git config --global user.email "tuimac.devadm01@gmail.com" && \
     git config --global user.name "tuimac"
+
+ENTRYPOINT ["/root/entrypoint.sh"]
