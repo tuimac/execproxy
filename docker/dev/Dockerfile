@@ -18,4 +18,6 @@ RUN apk update && \
     curl https://raw.githubusercontent.com/tuimac/tools/master/vim/installer/ubuntu.sh | bash && \
     git clone https://github.com/tuimac/execproxy && \
     npm install -g @angular/cli && \
-    pip3 install -r requirements.txt
+    pip3 install -r requirements.txt && \
+    cd execproxy/frontend && \
+    npm install

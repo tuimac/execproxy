@@ -28,7 +28,7 @@ jobs:
             sudo chmod +x /usr/local/bin/docker-compose
             node --version
             npm --version
-            python3 --V
+            python3 -V
       - run:
           name: Build Frontend Application
           working_directory: frontend

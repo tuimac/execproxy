@@ -23,7 +23,6 @@ function cleanup(){
 }
 
 function createContainer(){
-    mkdir ${VOLUME}
     docker build -t ${NAME} .
     runContainer
     cleanup
@@ -46,7 +45,6 @@ function deleteAll(){
     docker rm ${NAME}
     docker rmi ${NAME}
     cleanup
-    rm -rf ${VOLUME}
 }
 
 function commitImage(){
