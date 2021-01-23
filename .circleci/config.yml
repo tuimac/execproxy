@@ -35,7 +35,7 @@ jobs:
           command: |
             npm install
             npm run build
-            cp -rp build ../docker/deply
+            cp -rp build/frontend ../docker/deply
       - run:
           name: Prepare Backend Application
           command: cp -rp backend ../docker/deploy
