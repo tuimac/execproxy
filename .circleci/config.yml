@@ -50,29 +50,10 @@ jobs:
               -p 80:80 \
               -p 8000:8000 \
               --network bridge \
-              ${DOCKER_USER}/${IMAGENAME}:${CIRCLE_SHA1}
+              ${DOCKER_USER}/${IMAGENAME}:${CIRCLE_SHA1} \
               bash
-              #- run:
-              #name: Push images
-              #command: |
-              #echo ${DOCKER_PASSWORD} | docker login -u ${DOCKER_USER} --password-stdin
-              #docker push ${DOCKER_USER}/${FRONTIMAGE}:${CIRCLE_SHA1}
-              #docker push ${DOCKER_USER}/${BACKIMAGE}:${CIRCLE_SHA1}
-  deploy:
-    executor: awscli
-    steps:
-      - run:
-          name: Deploy containers
-          command: |
-            aws ssm send-command \
-              --targets Key=tag:Deploy,Values=ModbusParser \
-              --document-name 'AWS-RunShellScript' \
-              --parameters 'commands=/home/ec2-user/deploy.sh '${DOCKER_USER}' '${AWS_SNS_TOPIC_ARN}' '${CIRCLE_SHA1}
 workflows:
   version: 2.1
   execproxy-pipeline:
     jobs:
       - build
-        #- deploy:
-        # requires:
-        #   - build
