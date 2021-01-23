@@ -1,0 +1,78 @@
+version: 2.1
+executors:
+  awscli:
+    docker:
+      - image: amazon/aws-cli
+    environment:
+      AWS_DEFAULT_REGION: ap-northeast-1
+      AWS_PAGER: ""
+jobs:
+  build:
+    machine:
+      image: ubuntu-2004:202010-01
+    environment:
+      - IMAGENAME: execproxy
+      - CI: ""
+    steps:
+      - checkout
+      - run:
+          name: Install tools
+          command: |
+            sudo apt update
+            sudo apt install -y nodejs npm python3
+            sudo npm install n -g
+            sudo n stable
+            sudo apt purge -y nodejs npm
+            npm install -g @angular/cli
+            sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+            sudo chmod +x /usr/local/bin/docker-compose
+            node --version
+            npm --version
+            python3 --vesion
+      - run:
+          name: Build Frontend Application
+          working_directory: frontend
+          command: |
+            npm install
+            npm run build
+            cp -rp build ../docker/
+      - run:
+          name: Prepare Backend Application
+          command: cp -rp backend ../docker/
+      - run:
+          name: Build Frontend Docker Image
+          working_directory: docker
+          command: docker build -t ${DOCKER_USER}/${IMAGENAME}:${CIRCLE_SHA1} .
+      - run:
+          name: Run Containers
+          command: |
+            docker run -itd \
+              -p 80:80 \
+              -p 8000:8000 \
+              --network bridge \
+              ${DOCKER_USER}/${IMAGENAME}:${CIRCLE_SHA1}
+              bash
+      - run:
+          name: Push images
+          command: |
+            echo ${DOCKER_PASSWORD} | docker login -u ${DOCKER_USER} --password-stdin
+            docker push ${DOCKER_USER}/${FRONTIMAGE}:${CIRCLE_SHA1}
+            docker push ${DOCKER_USER}/${BACKIMAGE}:${CIRCLE_SHA1}
+  deploy:
+    executor: awscli
+    steps:
+      - run:
+          name: Deploy containers
+          command: |
+            aws ssm send-command \
+              --targets Key=tag:Deploy,Values=ModbusParser \
+              --document-name 'AWS-RunShellScript' \
+              --parameters 'commands=/home/ec2-user/deploy.sh '${DOCKER_USER}' '${AWS_SNS_TOPIC_ARN}' '${CIRCLE_SHA1}
+workflows:
+  version: 2.1
+  execproxy-pipeline:
+    jobs:
+      - build
+        #- deploy:
+        # requires:
+        #   - build
