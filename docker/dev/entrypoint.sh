@@ -6,4 +6,4 @@
 
 # Boot Django
 BACKEND_LOG='/root/execproxy/backend/logs/backend_exec.log'
-python3 /root/execproxy/backend/manage.py runserver 0:8000 >> $BACKEND_LOG
+python3 /root/execproxy/backend/manage.py runserver 0:8000 >> $BACKEND_LOG 2>&1

@@ -41,7 +41,7 @@ jobs:
           command: cp -rp backend docker/build/
       - run:
           name: Build Frontend Docker Image
-          working_directory: docker/deploy
+          working_directory: docker/build
           command: docker build -t ${DOCKER_USER}/${IMAGENAME}:${CIRCLE_SHA1} .
       - run:
           name: Run Containers
