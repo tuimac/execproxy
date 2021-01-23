@@ -28,20 +28,20 @@ jobs:
             sudo chmod +x /usr/local/bin/docker-compose
             node --version
             npm --version
-            python3 --vesion
+            python3 --V
       - run:
           name: Build Frontend Application
           working_directory: frontend
           command: |
             npm install
             npm run build
-            cp -rp build ../docker/
+            cp -rp build ../docker/deply
       - run:
           name: Prepare Backend Application
-          command: cp -rp backend ../docker/
+          command: cp -rp backend ../docker/deploy
       - run:
           name: Build Frontend Docker Image
-          working_directory: docker
+          working_directory: docker/deploy
           command: docker build -t ${DOCKER_USER}/${IMAGENAME}:${CIRCLE_SHA1} .
       - run:
           name: Run Containers
@@ -52,12 +52,12 @@ jobs:
               --network bridge \
               ${DOCKER_USER}/${IMAGENAME}:${CIRCLE_SHA1}
               bash
-      - run:
-          name: Push images
-          command: |
-            echo ${DOCKER_PASSWORD} | docker login -u ${DOCKER_USER} --password-stdin
-            docker push ${DOCKER_USER}/${FRONTIMAGE}:${CIRCLE_SHA1}
-            docker push ${DOCKER_USER}/${BACKIMAGE}:${CIRCLE_SHA1}
+              #- run:
+              #name: Push images
+              #command: |
+              #echo ${DOCKER_PASSWORD} | docker login -u ${DOCKER_USER} --password-stdin
+              #docker push ${DOCKER_USER}/${FRONTIMAGE}:${CIRCLE_SHA1}
+              #docker push ${DOCKER_USER}/${BACKIMAGE}:${CIRCLE_SHA1}
   deploy:
     executor: awscli
     steps:
