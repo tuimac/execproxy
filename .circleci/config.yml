@@ -41,7 +41,7 @@ jobs:
       - run:
           name: Build Frontend Docker Image
           working_directory: docker/build
-          command: docker build -t ${DOCKER_USER}/${CIRCLE_PR_REPONAME}:${CIRCLE_SHA1} .
+          command: docker build -t ${DOCKER_USER}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1} .
       - run:
           name: Run Containers
           command: |
@@ -49,7 +49,7 @@ jobs:
               -p 80:80 \
               -p 8000:8000 \
               --network bridge \
-              ${DOCKER_USER}/${CIRCLE_PR_REPONAME}:${CIRCLE_SHA1} \
+              ${DOCKER_USER}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1} \
               bash
   push-image:
     machine:
@@ -74,12 +74,12 @@ jobs:
           name: Create docker driver
           command: |
             docker run --rm --privileged docker/binfmt:820fdd95a9972a5308930a2bdfb8573dd4447ad3
-            docker buildx create --name ${CIRCLE_PR_REPONAME}
-            docker buildx use ${CIRCLE_PR_REPONAME}
+            docker buildx create --name ${CIRCLE_PROJECT_REPONAME}
+            docker buildx use ${CIRCLE_PROJECT_REPONAME}
       - run:
           name: Build and Push docker image to Docker Hub
           working_directory: builds
-          command: docker buildx build --platform linux/amd64,linux/arm64 -t ${DOCKER_USER}/${CIRCLE_PR_REPONAME}:${CIRCLE_SHA1} --push .
+          command: docker buildx build --platform linux/amd64,linux/arm64 -t ${DOCKER_USER}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1} --push .
 workflows:
   version: 2.1
   execproxy-pipeline:
