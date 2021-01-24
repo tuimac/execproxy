@@ -88,6 +88,3 @@ workflows:
       - push-image:
           requires:
             - build-image
-          filters:
-            branches:
-              only: master
