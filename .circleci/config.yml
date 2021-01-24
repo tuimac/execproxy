@@ -30,14 +30,14 @@ jobs:
             python3 -V
       - run:
           name: Build Frontend Application
-          working_directory: frontend
+          working_directory: src/frontend
           command: |
             npm install
             npm run build
-            cp -rp dist/frontend ../docker/build/
+            cp -rp dist/frontend ../../docker/build/
       - run:
           name: Prepare Backend Application
-          command: cp -rp backend docker/build/
+          command: cp -rp src/backend docker/build/
       - run:
           name: Build Frontend Docker Image
           working_directory: docker/build
@@ -52,9 +52,11 @@ jobs:
               ${DOCKER_USERNAME}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1} \
               bash
       - save_cache:
-          name: Save image cache
+          name: Save artfact cache
           key: docker-{{ .Environment.CIRCLE_SHA1 }}
-          paths: ~/caches/images.tar
+          paths:
+            - src/frontend
+            - src/backend
   push-image:
     machine:
       image: ubuntu-2004:202010-01
