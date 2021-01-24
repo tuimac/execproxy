@@ -16,7 +16,7 @@ class RunCommand:
                 stdout = subprocess.PIPE,
                 stderr = subprocess.PIPE
             )
-            self.response = ['result'] = result
+            self.response['result'] = result
             return self.response
         except Exception as e:
             raise e

@@ -20,7 +20,7 @@ RUN apk update && \
     git clone https://github.com/tuimac/execproxy && \
     npm install -g @angular/cli && \
     pip3 install -r requirements.txt && \
-    cd execproxy/frontend && \
+    cd execproxy/src/frontend && \
     npm install && \
     cd /root/execproxy && \
     git config --global user.email "tuimac.devadm01@gmail.com" && \

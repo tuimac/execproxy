@@ -55,8 +55,7 @@ jobs:
           name: Save artfact cache
           key: docker-{{ .Environment.CIRCLE_SHA1 }}
           paths:
-            - src/frontend
-            - src/backend
+            - docker/build
   push-image:
     machine:
       image: ubuntu-2004:202010-01
