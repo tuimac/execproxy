@@ -26,6 +26,7 @@ RUN apk update && \
     npm install && \
     cd /root/execproxy && \
     git config --global user.email "tuimac.devadm01@gmail.com" && \
-    git config --global user.name "tuimac"
+    git config --global user.name "tuimac" && \
+    mkdir /host
 
 ENTRYPOINT ["/root/entrypoint.sh"]

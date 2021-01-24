@@ -11,9 +11,13 @@ IMAGE=${DOCKERHUBUSER}/${NAME}
 function runContainer(){
     docker run -itd --name ${NAME} \
                 -h ${NAME} \
-                -p "80:4200" \
-                -p "8000:8000" \
-                --network="bridge" \
+                -p 80:4200 \
+                -p 8000:8000 \
+                -v $(pwd):/host \
+                --network bridge \
+                --privileged \
+                --pid host \
+                --ipc host \
                 ${NAME}
 }
 
@@ -25,7 +29,6 @@ function cleanup(){
 function createContainer(){
     docker build -t ${NAME} .
     runContainer
-    cleanup
 }
 
 function rerunContainer(){
