@@ -51,6 +51,10 @@ jobs:
               --network bridge \
               ${DOCKER_USERNAME}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1} \
               bash
+      - save_cache:
+          name: Save image cache
+          key: docker-{{ .Environment.CIRCLE_SHA1 }}
+          paths: ~/caches/images.tar
   push-image:
     machine:
       image: ubuntu-2004:202010-01
@@ -58,6 +62,10 @@ jobs:
       - BUILDX: https://github.com/docker/buildx/releases/download/v0.5.1/buildx-v0.5.1.linux-amd64
     steps:
       - checkout
+      - restore_cache:
+          name: Restore image cache
+          key: docker-{{ .Environment.CIRCLE_SHA1 }}
+          paths: ~/caches/images.tar
       - run:
           name: Create directory for Docker Buildx plugin binary
           command: mkdir -vp ~/.docker/cli-plugins/
@@ -78,7 +86,7 @@ jobs:
             docker buildx use ${CIRCLE_PROJECT_REPONAME}
       - run:
           name: Build and Push docker image to Docker Hub
-          working_directory: builds
+          working_directory: docker/build
           command: docker buildx build --platform linux/amd64,linux/arm64 -t ${DOCKER_USERNAME}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1} --push .
 workflows:
   version: 2.1
@@ -88,3 +96,7 @@ workflows:
       - push-image:
           requires:
             - build-image
+          filters:
+            branches:
+              only:
+                - master
