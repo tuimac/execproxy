@@ -20,7 +20,7 @@ class RunCommandAPIViews(views.APIView):
             response = rc.run(command)
             return Response(response, status=status.HTTP_200_OK)
         except Exception as e:
-            messaage = traceback.format_exc()
+            message = traceback.format_exc()
             logger.error(message)
             response = {'message': message}
             return Response(response, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
@@ -30,10 +30,10 @@ class RunCommandAPIViews(views.APIView):
             if request.data == '':
                 return Respose({'message': 'Not allowed no data request.'}, status=status.HTTP_400_BAD_REQUEST)
             rc = RunCommand()
-            response = rc.run(command=request.data)
+            response = rc.run(command=request.data['command'])
             return Response(response, status=status.HTTP_200_OK)
         except Exception as e:
-            messaage = traceback.format_exc()
+            message = traceback.format_exc()
             logger.error(message)
             response = {'message': message}
             return Response(response, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

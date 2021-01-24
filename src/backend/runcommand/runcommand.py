@@ -13,10 +13,13 @@ class RunCommand:
         try:
             result = subprocess.run(
                 command.split(),
-                stdout = subprocess.PIPE,
-                stderr = subprocess.PIPE
+                capture_output = True,
+                text = True
             )
-            self.response['result'] = result
+            logger.info(result.stdout)
+            logger.info(result.stderr)
+            self.response['stdout'] = str(result.stdout)
+            self.response['stderr'] = str(result.stderr)
             return self.response
         except Exception as e:
             raise e

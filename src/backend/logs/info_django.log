@@ -1,0 +1,1505 @@
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:11:04,431
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 617
+
+Watching for file changes with StatReloader
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:11:49,346
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:11:49,347
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 1922
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:12:18,620
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:12:18,620
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 1922
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:12:51,845
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:12:51,846
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 1922
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:13:26,289
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:13:26,289
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 1922
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:14:03,350
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:14:03,350
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 1922
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:14:37,597
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:14:37,598
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 1922
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:15:11,699
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:15:11,699
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 1922
+----------------------------------------------------------------------------------------------------
+[ERROR] - 2021-01-24 06:15:27,529
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Internal Server Error: /runcommand
+Traceback (most recent call last):
+  File "/root/execproxy/src/backend/runcommand/views.py", line 33, in post
+    response = rc.run(command=request.data)
+  File "/root/execproxy/src/backend/runcommand/runcommand.py", line 22, in run
+    raise e
+  File "/root/execproxy/src/backend/runcommand/runcommand.py", line 15, in run
+    command.split(),
+AttributeError: 'dict' object has no attribute 'split'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/root/execproxy/src/backend/runcommand/views.py", line 37, in post
+    logger.error(message)
+NameError: name 'message' is not defined
+----------------------------------------------------------------------------------------------------
+[ERROR] - 2021-01-24 06:15:27,531
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST /runcommand HTTP/1.1" 500 93598
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:15:48,615
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:15:48,618
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 1922
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:16:21,142
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:16:21,142
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 1922
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:16:43,849
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:16:43,850
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 1922
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:16:56,263
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:16:56,264
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 1922
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:17:28,229
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:17:28,235
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 1922
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:17:58,441
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 240
+
+/root/execproxy/src/backend/runcommand/views.py changed, reloading.
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:17:59,094
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 617
+
+Watching for file changes with StatReloader
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:18:03,466
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:18:03,467
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 1922
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:18:35,853
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:18:35,854
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 1922
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:19:09,971
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:19:09,972
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 1922
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:19:42,900
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:19:42,900
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 1922
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:20:14,702
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:20:14,702
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 1922
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:20:48,951
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:20:48,951
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 1922
+----------------------------------------------------------------------------------------------------
+[ERROR] - 2021-01-24 06:21:22,242
+
+Source log file: /root/execproxy/src/backend/runcommand/views.py line: 37
+
+Traceback (most recent call last):
+  File "/root/execproxy/src/backend/runcommand/views.py", line 33, in post
+    response = rc.run(command=request.data)
+  File "/root/execproxy/src/backend/runcommand/runcommand.py", line 22, in run
+    raise e
+  File "/root/execproxy/src/backend/runcommand/runcommand.py", line 15, in run
+    command.split(),
+AttributeError: 'dict' object has no attribute 'split'
+
+----------------------------------------------------------------------------------------------------
+[ERROR] - 2021-01-24 06:21:22,243
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Internal Server Error: /runcommand
+----------------------------------------------------------------------------------------------------
+[ERROR] - 2021-01-24 06:21:22,244
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST /runcommand HTTP/1.1" 500 428
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:21:24,181
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:21:24,182
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 1922
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:21:54,323
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:21:54,324
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 1922
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:22:29,370
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:22:29,370
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 1922
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:23:01,378
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:23:01,380
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 1922
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:23:26,907
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 240
+
+/root/execproxy/src/backend/runcommand/views.py changed, reloading.
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:23:27,646
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 617
+
+Watching for file changes with StatReloader
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:23:34,416
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:23:34,417
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 1922
+----------------------------------------------------------------------------------------------------
+[ERROR] - 2021-01-24 06:23:35,003
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Internal Server Error: /runcommand
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/usr/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/lib/python3.8/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+  File "/usr/lib/python3.8/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3.8/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+  File "/usr/lib/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type CompletedProcess is not JSON serializable
+----------------------------------------------------------------------------------------------------
+[ERROR] - 2021-01-24 06:23:35,006
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST /runcommand HTTP/1.1" 500 90863
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:24:08,841
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:24:08,843
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 1922
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:24:41,872
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 240
+
+/root/execproxy/src/backend/backend/settings.py changed, reloading.
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:24:42,433
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 617
+
+Watching for file changes with StatReloader
+----------------------------------------------------------------------------------------------------
+[ERROR] - 2021-01-24 06:24:44,000
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Internal Server Error: /runcommand
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/usr/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/lib/python3.8/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+  File "/usr/lib/python3.8/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3.8/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+  File "/usr/lib/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type CompletedProcess is not JSON serializable
+----------------------------------------------------------------------------------------------------
+[ERROR] - 2021-01-24 06:24:44,004
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST /runcommand HTTP/1.1" 500 145
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:25:19,666
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:25:19,666
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:25:49,647
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:25:49,647
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:26:24,645
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:26:24,646
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:26:42,546
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 240
+
+/root/execproxy/src/backend/runcommand/views.py changed, reloading.
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:26:43,302
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 617
+
+Watching for file changes with StatReloader
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:26:59,245
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:26:59,246
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:27:35,775
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:27:35,776
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:28:08,703
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:28:08,703
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:28:41,058
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:28:41,058
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:29:13,117
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:29:13,117
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:29:47,936
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:29:47,936
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:29:48,306
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 240
+
+/root/execproxy/src/backend/runcommand/views.py changed, reloading.
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:29:49,029
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 617
+
+Watching for file changes with StatReloader
+----------------------------------------------------------------------------------------------------
+[ERROR] - 2021-01-24 06:29:53,881
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Internal Server Error: /runcommand
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/usr/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/lib/python3.8/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+  File "/usr/lib/python3.8/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3.8/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+  File "/usr/lib/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type CompletedProcess is not JSON serializable
+----------------------------------------------------------------------------------------------------
+[ERROR] - 2021-01-24 06:29:53,890
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST /runcommand HTTP/1.1" 500 145
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:30:22,323
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:30:22,324
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:30:56,870
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:30:56,870
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:31:04,262
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 240
+
+/root/execproxy/src/backend/runcommand/views.py changed, reloading.
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:31:04,737
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 617
+
+Watching for file changes with StatReloader
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:31:30,012
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:31:30,012
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:31:34,020
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 240
+
+/root/execproxy/src/backend/runcommand/runcommand.py changed, reloading.
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:31:34,785
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 617
+
+Watching for file changes with StatReloader
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:31:37,590
+
+Source log file: /root/execproxy/src/backend/runcommand/runcommand.py line: 20
+
+{'result': CompletedProcess(args=['ls'], returncode=0, stdout=b'entrypoint.sh\nexecproxy\npostman.sh\nrequirements.txt\n', stderr=b'')}
+----------------------------------------------------------------------------------------------------
+[ERROR] - 2021-01-24 06:31:37,602
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Internal Server Error: /runcommand
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/usr/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/usr/lib/python3.8/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+  File "/usr/lib/python3.8/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3.8/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+  File "/usr/lib/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type CompletedProcess is not JSON serializable
+----------------------------------------------------------------------------------------------------
+[ERROR] - 2021-01-24 06:31:37,610
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST /runcommand HTTP/1.1" 500 145
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:32:06,592
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:32:06,592
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:32:38,824
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:32:38,825
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:32:44,746
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 240
+
+/root/execproxy/src/backend/runcommand/runcommand.py changed, reloading.
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:32:45,392
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 617
+
+Watching for file changes with StatReloader
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:32:48,032
+
+Source log file: /root/execproxy/src/backend/runcommand/runcommand.py line: 20
+
+{'result': 'result'}
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:32:48,036
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST /runcommand HTTP/1.1" 200 19
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:33:09,563
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 240
+
+/root/execproxy/src/backend/runcommand/runcommand.py changed, reloading.
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:33:10,055
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 617
+
+Watching for file changes with StatReloader
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:33:11,733
+
+Source log file: /root/execproxy/src/backend/runcommand/runcommand.py line: 20
+
+{'result': "CompletedProcess(args=['ls'], returncode=0, stdout=b'entrypoint.sh\\nexecproxy\\npostman.sh\\nrequirements.txt\\n', stderr=b'')"}
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:33:11,738
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST /runcommand HTTP/1.1" 200 140
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:33:16,333
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:33:16,334
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:33:45,933
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:33:45,934
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:34:00,802
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 240
+
+/root/execproxy/src/backend/runcommand/runcommand.py changed, reloading.
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:34:01,827
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 617
+
+Watching for file changes with StatReloader
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:34:16,073
+
+Source log file: /root/execproxy/src/backend/runcommand/runcommand.py line: 19
+
+CompletedProcess(args=['ls'], returncode=0, stdout=b'entrypoint.sh\nexecproxy\npostman.sh\nrequirements.txt\n', stderr=b'')
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:34:16,077
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST /runcommand HTTP/1.1" 200 140
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:34:20,767
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:34:20,771
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:34:51,749
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:34:51,750
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:35:25,071
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:35:25,072
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:35:59,816
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:35:59,817
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:36:29,999
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:36:30,000
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:37:06,376
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:37:06,377
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:37:42,240
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:37:42,241
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:38:14,523
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:38:14,523
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:38:39,849
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 240
+
+/root/execproxy/src/backend/runcommand/runcommand.py changed, reloading.
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:38:40,390
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 617
+
+Watching for file changes with StatReloader
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:38:44,442
+
+Source log file: /root/execproxy/src/backend/runcommand/runcommand.py line: 19
+
+CompletedProcess(args=['ls'], returncode=0, stdout='entrypoint.sh\nexecproxy\npostman.sh\nrequirements.txt\n', stderr='')
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:38:44,456
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST /runcommand HTTP/1.1" 200 138
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:38:45,113
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:38:45,113
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:38:55,651
+
+Source log file: /root/execproxy/src/backend/runcommand/runcommand.py line: 19
+
+CompletedProcess(args=['ls'], returncode=0, stdout='entrypoint.sh\nexecproxy\npostman.sh\nrequirements.txt\n', stderr='')
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:38:55,655
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST /runcommand HTTP/1.1" 200 138
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:39:18,756
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:39:18,757
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:39:41,565
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 240
+
+/root/execproxy/src/backend/runcommand/runcommand.py changed, reloading.
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:39:42,336
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 617
+
+Watching for file changes with StatReloader
+----------------------------------------------------------------------------------------------------
+[ERROR] - 2021-01-24 06:39:43,853
+
+Source log file: /root/execproxy/src/backend/runcommand/views.py line: 37
+
+Traceback (most recent call last):
+  File "/root/execproxy/src/backend/runcommand/views.py", line 33, in post
+    response = rc.run(command=request.data['command'])
+  File "/root/execproxy/src/backend/runcommand/runcommand.py", line 23, in run
+    raise e
+  File "/root/execproxy/src/backend/runcommand/runcommand.py", line 19, in run
+    logger.info(result.output)
+AttributeError: 'CompletedProcess' object has no attribute 'output'
+
+----------------------------------------------------------------------------------------------------
+[ERROR] - 2021-01-24 06:39:43,858
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Internal Server Error: /runcommand
+----------------------------------------------------------------------------------------------------
+[ERROR] - 2021-01-24 06:39:43,860
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST /runcommand HTTP/1.1" 500 462
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:40:28,275
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:40:28,275
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:40:59,491
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 240
+
+/root/execproxy/src/backend/runcommand/runcommand.py changed, reloading.
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:41:00,127
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 617
+
+Watching for file changes with StatReloader
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:41:00,825
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:41:00,827
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:41:02,747
+
+Source log file: /root/execproxy/src/backend/runcommand/runcommand.py line: 19
+
+entrypoint.sh
+execproxy
+postman.sh
+requirements.txt
+
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:41:02,747
+
+Source log file: /root/execproxy/src/backend/runcommand/runcommand.py line: 20
+
+
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:41:02,750
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST /runcommand HTTP/1.1" 200 137
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:41:25,109
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 240
+
+/root/execproxy/src/backend/runcommand/runcommand.py changed, reloading.
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:41:25,581
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/autoreload.py line: 617
+
+Watching for file changes with StatReloader
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:41:27,066
+
+Source log file: /root/execproxy/src/backend/runcommand/runcommand.py line: 19
+
+entrypoint.sh
+execproxy
+postman.sh
+requirements.txt
+
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:41:27,066
+
+Source log file: /root/execproxy/src/backend/runcommand/runcommand.py line: 20
+
+
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:41:27,071
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST /runcommand HTTP/1.1" 200 81
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:41:32,171
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:41:32,173
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:42:06,659
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:42:06,659
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:42:37,756
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:42:37,757
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:43:05,962
+
+Source log file: /root/execproxy/src/backend/runcommand/runcommand.py line: 19
+
+entrypoint.sh     execproxy         postman.sh        requirements.txt
+
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:43:05,962
+
+Source log file: /root/execproxy/src/backend/runcommand/runcommand.py line: 20
+
+
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:43:05,972
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST /runcommand HTTP/1.1" 200 97
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:43:13,915
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:43:13,916
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:43:42,869
+
+Source log file: /root/execproxy/src/backend/runcommand/runcommand.py line: 19
+
+
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:43:42,869
+
+Source log file: /root/execproxy/src/backend/runcommand/runcommand.py line: 20
+
+ls: unrecognized option: 0
+BusyBox v1.32.1 () multi-call binary.
+
+Usage: ls [-1AaCxdLHRFplinshrSXvctu] [-w WIDTH] [FILE]...
+
+List directory contents
+
+	-1	One column output
+	-a	Include entries which start with .
+	-A	Like -a, but exclude . and ..
+	-x	List by lines
+	-d	List directory entries instead of contents
+	-L	Follow symlinks
+	-H	Follow symlinks on command line
+	-R	Recurse
+	-p	Append / to dir entries
+	-F	Append indicator (one of */=@|) to entries
+	-l	Long listing format
+	-i	List inode numbers
+	-n	List numeric UIDs and GIDs instead of names
+	-s	List allocated blocks
+	-lc	List ctime
+	-lu	List atime
+	--full-time	List full date and time
+	-h	Human readable sizes (1K 243M 2G)
+	--group-directories-first
+	-S	Sort by size
+	-X	Sort by extension
+	-v	Sort by version
+	-t	Sort by mtime
+	-tc	Sort by ctime
+	-tu	Sort by atime
+	-r	Reverse sort order
+	-w N	Format N columns wide
+	--color[={always,never,auto}]	Control coloring
+
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:43:42,871
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST /runcommand HTTP/1.1" 200 1037
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:43:47,932
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:43:47,932
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:44:22,287
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:44:22,287
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:44:32,636
+
+Source log file: /root/execproxy/src/backend/runcommand/runcommand.py line: 19
+
+
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:44:32,637
+
+Source log file: /root/execproxy/src/backend/runcommand/runcommand.py line: 20
+
+ls: unrecognized option: 0
+BusyBox v1.32.1 () multi-call binary.
+
+Usage: ls [-1AaCxdLHRFplinshrSXvctu] [-w WIDTH] [FILE]...
+
+List directory contents
+
+	-1	One column output
+	-a	Include entries which start with .
+	-A	Like -a, but exclude . and ..
+	-x	List by lines
+	-d	List directory entries instead of contents
+	-L	Follow symlinks
+	-H	Follow symlinks on command line
+	-R	Recurse
+	-p	Append / to dir entries
+	-F	Append indicator (one of */=@|) to entries
+	-l	Long listing format
+	-i	List inode numbers
+	-n	List numeric UIDs and GIDs instead of names
+	-s	List allocated blocks
+	-lc	List ctime
+	-lu	List atime
+	--full-time	List full date and time
+	-h	Human readable sizes (1K 243M 2G)
+	--group-directories-first
+	-S	Sort by size
+	-X	Sort by extension
+	-v	Sort by version
+	-t	Sort by mtime
+	-tc	Sort by ctime
+	-tu	Sort by atime
+	-r	Reverse sort order
+	-w N	Format N columns wide
+	--color[={always,never,auto}]	Control coloring
+
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:44:32,640
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST /runcommand HTTP/1.1" 200 1037
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:44:44,160
+
+Source log file: /root/execproxy/src/backend/runcommand/runcommand.py line: 19
+
+
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:44:44,161
+
+Source log file: /root/execproxy/src/backend/runcommand/runcommand.py line: 20
+
+ls: unrecognized option: 0
+BusyBox v1.32.1 () multi-call binary.
+
+Usage: ls [-1AaCxdLHRFplinshrSXvctu] [-w WIDTH] [FILE]...
+
+List directory contents
+
+	-1	One column output
+	-a	Include entries which start with .
+	-A	Like -a, but exclude . and ..
+	-x	List by lines
+	-d	List directory entries instead of contents
+	-L	Follow symlinks
+	-H	Follow symlinks on command line
+	-R	Recurse
+	-p	Append / to dir entries
+	-F	Append indicator (one of */=@|) to entries
+	-l	Long listing format
+	-i	List inode numbers
+	-n	List numeric UIDs and GIDs instead of names
+	-s	List allocated blocks
+	-lc	List ctime
+	-lu	List atime
+	--full-time	List full date and time
+	-h	Human readable sizes (1K 243M 2G)
+	--group-directories-first
+	-S	Sort by size
+	-X	Sort by extension
+	-v	Sort by version
+	-t	Sort by mtime
+	-tc	Sort by ctime
+	-tu	Sort by atime
+	-r	Reverse sort order
+	-w N	Format N columns wide
+	--color[={always,never,auto}]	Control coloring
+
+----------------------------------------------------------------------------------------------------
+[INFO] - 2021-01-24 06:44:44,162
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST /runcommand HTTP/1.1" 200 1037
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:44:53,222
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:44:53,223
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:45:16,923
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:45:16,923
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"GET / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:45:17,219
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:45:17,219
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"GET / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:45:25,121
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:45:25,121
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:45:58,701
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:45:58,701
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:46:34,549
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:46:34,550
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:47:06,827
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:47:06,827
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:47:38,568
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:47:38,568
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:48:17,065
+
+Source log file: /usr/lib/python3.8/site-packages/django/utils/log.py line: 224
+
+Not Found: /
+----------------------------------------------------------------------------------------------------
+[WARNING] - 2021-01-24 06:48:17,065
+
+Source log file: /usr/lib/python3.8/site-packages/django/core/servers/basehttp.py line: 157
+
+"POST / HTTP/1.1" 404 179
