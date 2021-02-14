@@ -12,7 +12,7 @@ function runContainer(){
     docker run -itd --name ${NAME} \
                 -h ${NAME} \
                 -p 80:4200 \
-                -p 8080:8080 \
+                -p 8000:8000 \
                 -v $(pwd):/host \
                 --network bridge \
                 --privileged \
