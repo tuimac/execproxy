@@ -13,8 +13,8 @@ function runContainer(){
                 -h ${NAME} \
                 -p 80:4200 \
                 -p 8000:8000 \
-                -v $(pwd):/host \
-                --network bridge \
+                -v /:/host \
+                --network host \
                 --privileged \
                 --pid host \
                 --ipc host \
