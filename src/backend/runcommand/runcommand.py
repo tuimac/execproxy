@@ -11,15 +11,24 @@ class RunCommand:
 
     def run(self, command) -> dict:
         try:
-            result = subprocess.run(
-                command.split(),
-                capture_output = True,
-                text = True
+            chrootCmd = 'chroot /host'
+            p = subprocess.Popen(
+                    chrootCmd, 
+                    shell=True, 
+                    stdin=subprocess.PIPE, 
+                    stdout=subprocess.PIPE, 
+                    stderr=subprocess.PIPE
             )
-            logger.info(result.stdout)
-            logger.info(result.stderr)
-            self.response['stdout'] = str(result.stdout)
-            self.response['stderr'] = str(result.stderr)
+            if '\n' not in command:
+                command = command + '\n'
+
+            stdout, stderr = p.communicate(input=command.encode())
+            stdout = stdout.decode()
+            stderr = stderr.decode()
+            logger.info(stdout)
+            logger.info(stderr)
+            self.response['stdout'] = stdout
+            self.response['stderr'] = stderr
             return self.response
         except Exception as e:
             raise e
