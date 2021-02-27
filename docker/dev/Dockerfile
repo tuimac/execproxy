@@ -10,6 +10,7 @@ WORKDIR /root
 ADD requirements.txt /root/requirements.txt
 ADD bashrc /root/.bashrc
 ADD entrypoint.sh /root/entrypoint.sh
+ADD postman.sh /root/postman.sh
 
 RUN apk update && \
     apk upgrade && \
@@ -17,8 +18,6 @@ RUN apk update && \
     mkdir /etc/vim/backup && \
     mkdir /etc/vim/undo && \
     curl https://raw.githubusercontent.com/tuimac/tools/master/vim/installer/ubuntu.sh | bash && \
-    curl https://raw.githubusercontent.com/tuimac/tools/master/linux/scripts/postman.sh -o /root/postman.sh && \
-    chmod +x /root/postman.sh && \
     git clone https://github.com/tuimac/execproxy && \
     npm install -g @angular/cli && \
     pip3 install -r requirements.txt && \
