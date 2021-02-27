@@ -13,7 +13,7 @@ ADD entrypoint.sh /root/entrypoint.sh
 
 RUN apk update && \
     apk upgrade && \
-    apk add --no-cache bash git icu-dev icu-libs vim nodejs nodejs-npm python3 py3-pip curl jq && \
+    apk add --no-cache bash git icu-dev icu-libs vim nodejs nodejs-npm python3 py3-pip curl jq tree && \
     mkdir /etc/vim/backup && \
     mkdir /etc/vim/undo && \
     curl https://raw.githubusercontent.com/tuimac/tools/master/vim/installer/ubuntu.sh | bash && \
