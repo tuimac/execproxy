@@ -11,7 +11,8 @@ class RunCommand:
 
     def run(self, command) -> dict:
         try:
-            chrootCmd = 'chroot /host'
+            # settings.py defined HOST_MOUNTED_DIR
+            chrootCmd = 'chroot ' + HOST_MOUNTED_DIR
             p = subprocess.Popen(
                     chrootCmd, 
                     shell=True, 
@@ -19,6 +20,7 @@ class RunCommand:
                     stdout=subprocess.PIPE, 
                     stderr=subprocess.PIPE
             )
+            # To execute command automatically
             if '\n' not in command:
                 command = command + '\n'
 
@@ -29,6 +31,8 @@ class RunCommand:
             logger.info(stderr)
             self.response['stdout'] = stdout
             self.response['stderr'] = stderr
-            return self.response
         except Exception as e:
+            self.response['exception'] = traceback.format_exc()
             raise e
+        finally:
+            return self.response
