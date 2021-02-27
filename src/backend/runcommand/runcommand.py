@@ -1,4 +1,5 @@
 import json
+import os
 import logging
 import traceback
 import subprocess
@@ -11,8 +12,7 @@ class RunCommand:
 
     def run(self, command) -> dict:
         try:
-            # settings.py defined HOST_MOUNTED_DIR
-            chrootCmd = 'chroot ' + HOST_MOUNTED_DIR
+            chrootCmd = 'chroot ' + os.getenv('HOST_MOUNTED_DIR')
             p = subprocess.Popen(
                     chrootCmd, 
                     shell=True, 
