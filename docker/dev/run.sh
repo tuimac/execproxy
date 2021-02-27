@@ -14,8 +14,8 @@ function runContainer(){
                 -p 80:4200 \
                 -p 8000:8000 \
                 -v /:/host \
-                --network host \
                 --privileged \
+                --network host \
                 --pid host \
                 --ipc host \
                 ${NAME}
