@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-runcommand',
+  selector: 'runcommand',
   templateUrl: './runcommand.component.html',
   styleUrls: ['./runcommand.component.scss']
 })
