@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'root',
+  selector: 'execproxy-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
