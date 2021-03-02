@@ -3,7 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { RuncommandComponent } from './runcommand/runcommand.component';
 
 const routes: Routes = [
-  { path: 'runcommand', component: RuncommandComponent }
+  {
+    path: '',
+    redirectTo: 'dashboard',
+    pathMatch: 'full',
+  },
+  {
+    path: 'runcommand',
+    component: RuncommandComponent
+  }
 ];
 
 @NgModule({
