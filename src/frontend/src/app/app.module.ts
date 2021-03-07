@@ -9,20 +9,20 @@ import { MatButtonModule } from '@angular/material/button';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
-import { DashboardModule } from './pages/dashboard/dashboard.module';
+import { RuncommandModule } from './pages/runcommand/runcommand.module';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { AuthModule } from './pages/auth/auth.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
     SharedModule,
     AuthModule,
-    DashboardModule,
+    RuncommandModule,
     BrowserAnimationsModule,
     RouterModule,
     AppRoutingModule,
