@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RuncommandService } from '../../services';
+import { Runcommand } from '../../models';
+import { Subject, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-input',
@@ -8,12 +10,16 @@ import { RuncommandService } from '../../services';
 })
 export class InputComponent implements OnInit {
 
+  public runcommandSubject: Subject<Runcommand> = new Subject();
+  public result$: Observable<Runcommand>;
+
   constructor(private runcommandService: RuncommandService) { }
 
   ngOnInit(): void {
+    this.
   }
 
   runCommand(command: string) {
-    this.runCommand.next(command);
+    this.runcommandSubject.next(command);
   }
 }
