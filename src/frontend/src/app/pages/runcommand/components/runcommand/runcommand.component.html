@@ -1,8 +1,8 @@
 <mat-card>
   <mat-card-title>Command</mat-card-title>
-  <mat-form-field #command appearance="outline">
+  <mat-form-field appearance="outline">
     <mat-label>Type in command</mat-label>
-    <input matInput placeholder="Command here...">
+    <input #command matInput placeholder="Command here...">
   </mat-form-field><br>
   <button mat-raised-button color="primary" (click)="runCommand(command.value);">
     Run

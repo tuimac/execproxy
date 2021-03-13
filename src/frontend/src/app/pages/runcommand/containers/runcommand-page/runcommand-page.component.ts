@@ -11,7 +11,5 @@ import { RuncommandService } from '../../services';
 export class RuncommandPageComponent {
   public dailyLineChartData$: Observable<any>;
 
-  constructor(private service: RuncommandService) {
-    //this.dailyLineChartData$ = this.service.loadDailyLineChartData();
-  }
+  constructor() { }
 }

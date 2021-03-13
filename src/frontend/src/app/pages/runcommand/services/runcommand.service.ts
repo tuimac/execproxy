@@ -12,9 +12,10 @@ export class RuncommandService {
 
   private baseurl: string = window.location.protocol + '//' + window.location.hostname + ':' + environment.port;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  public runCommand(command: String): Observable<Runcommand> {
+  runCommand(command: String): Observable<Runcommand> {
+    console.log(this.baseurl);
     return this.http.post<Runcommand>(
       `${this.baseurl}/runcommand`,
       command
