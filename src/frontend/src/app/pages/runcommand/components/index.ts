@@ -1,1 +1,1 @@
-export * from './results/results.component';
+export * from './runcommand/runcommand.component';

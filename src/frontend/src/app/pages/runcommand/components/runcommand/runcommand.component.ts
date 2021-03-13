@@ -4,19 +4,18 @@ import { Runcommand } from '../../models';
 import { Subject, Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-input',
-  templateUrl: './input.component.html',
-  styleUrls: ['./input.component.css']
+  selector: 'app-runcommand',
+  templateUrl: './runcommand.component.html',
+  styleUrls: ['./runcommand.component.css']
 })
-export class InputComponent implements OnInit {
+export class RuncommandComponent implements OnInit {
 
-  public runcommandSubject: Subject<Runcommand> = new Subject();
+  public runcommandSubject: Subject<string> = new Subject();
   public result$: Observable<Runcommand>;
 
   constructor(private runcommandService: RuncommandService) { }
 
   ngOnInit(): void {
-    this.
   }
 
   runCommand(command: string) {

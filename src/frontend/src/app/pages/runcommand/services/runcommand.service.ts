@@ -16,7 +16,7 @@ export class RuncommandService {
 
   public runCommand(command: String): Observable<Runcommand> {
     return this.http.post<Runcommand>(
-      `${this.baseurl}/runcommnad`,
+      `${this.baseurl}/runcommand`,
       command
     ).pipe(
       map(data => {
@@ -24,7 +24,7 @@ export class RuncommandService {
         return data['body'];
       }),
       catchError(error => {
-        return throwError('Book not found');
+        return throwError('Runcommand: There is some error.');
       })
     );
   }

@@ -20,9 +20,6 @@ class RunCommand:
                     stdout=subprocess.PIPE, 
                     stderr=subprocess.PIPE
             )
-            # To execute command automatically
-            if '\n' not in command:
-                command = command + '\n'
 
             stdout, stderr = p.communicate(input=command.encode())
             stdout = stdout.decode()

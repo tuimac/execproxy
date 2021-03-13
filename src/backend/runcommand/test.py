@@ -7,9 +7,9 @@ import time
 
 if __name__ == '__main__':
     p = subprocess.Popen('chroot /host', shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    command = 'docker stop execproxy' +  '\n'
+    command = 'docker ps -a' +  '\n'
     stdout, stderr = p.communicate(input=command.encode())
     print('################stdout##############')
-    print(stdout.decode())
+    print(stdout.decode().splitlines())
     print('################stderr##############')
-    print(stderr.decode())
+    print(stderr.decode().splitlines())

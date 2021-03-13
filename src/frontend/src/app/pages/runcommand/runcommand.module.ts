@@ -18,15 +18,13 @@ import { FormsModule } from '@angular/forms';
 import { RuncommandPageComponent } from './containers';
 import { SharedModule } from '../../shared/shared.module';
 import { RuncommandService } from './services';
-import { ResultsComponent } from './components/results/results.component';
-import { InputComponent } from './components/input/input.component';
+import { RuncommandComponent } from './components/runcommand/runcommand.component';
 
 
 @NgModule({
   declarations: [
     RuncommandPageComponent,
-    ResultsComponent,
-    InputComponent,
+    RuncommandComponent,
   ],
   imports: [
     CommonModule,
