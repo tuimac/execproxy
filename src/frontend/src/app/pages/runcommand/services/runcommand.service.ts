@@ -15,27 +15,23 @@ export class RuncommandService {
   constructor(private http: HttpClient) {}
 
   runCommand(command: string): Observable<Runcommand> {
-    console.log(this.baseurl);
-
-    const headers = {
-      header: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    };
-
-    const options = {
-      params: new HttpParams().set('command', command)
-    };
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    const params = new HttpParams().set(
+      'command', command
+    );
 
     return this.http.get<Runcommand>(
       `${this.baseurl}/runcommand`,
-      options,
+      { headers, params },
     ).pipe(
-      retry(3),
-      catchError(this.handleError)
+      map((data) => {
+        return data;
+      },
+      catchError(error => {
+        return throwError('Runcommand: There are some error.');
+      }))
     );
-  }
-  handleError(handleError: any): import("rxjs").OperatorFunction<Runcommand, any> {
-    throw new Error('Method not implemented.');
   }
 }

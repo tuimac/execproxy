@@ -1,4 +1,4 @@
 export interface Runcommand {
-  result: string;
-  data: string;
+  stdout: string;
+  stderr: string;
 }

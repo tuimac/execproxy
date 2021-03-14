@@ -21,7 +21,9 @@ export class RuncommandComponent implements OnInit {
   runCommand(command: string): void {
     if(!command) { return; }
     this.runcommandService.runCommand(command)
-      .subscribe(data => this.result = data);
-    console.log(this.result);
+      .subscribe(data => {
+        this.result = data;
+        console.log(this.result);
+      });
   }
 }
