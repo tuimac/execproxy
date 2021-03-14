@@ -1,4 +1,9 @@
 pre {
     background-color: black;
     color: white;
+    overflow-x: scroll;
+}
+
+mat-form-field {
+    width: 100%;
 }
