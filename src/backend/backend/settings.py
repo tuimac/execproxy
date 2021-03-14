@@ -154,7 +154,7 @@ LOGGING = {
 # CORS setting
 # https://github.com/adamchainz/django-cors-headers#setup
 
-CORS_ORIGIN_REGEX_WHITELIST = [
+CORS_ALLOWED_ORIGIN_REGEXES = [
     r'http://*',
 ]
 
