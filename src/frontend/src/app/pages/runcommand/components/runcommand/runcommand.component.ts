@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { RuncommandService } from '../../services';
-import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 import { Runcommand } from '../../models';
 import { Subject, Observable } from 'rxjs';
+import { RuncommandService } from '../../services';
 
 @Component({
   selector: 'app-runcommand',
@@ -12,21 +11,16 @@ import { Subject, Observable } from 'rxjs';
 export class RuncommandComponent implements OnInit {
 
   public runcommandSubject: Subject<string> = new Subject();
-  public result$: Observable<Runcommand>;
+  public result: Runcommand;
 
   constructor(private runcommandService: RuncommandService) { }
 
   ngOnInit(): void {
-    this.result$ = this.runcommandSubject.pipe(
-      debounceTime(0),
-      distinctUntilChanged(),
-      switchMap((command: string) => this.runcommandService.runCommand(command))
-    );
   }
 
-  runCommand(command: string) {
+  runCommand(command: string): void {
     if(!command) { return; }
-    this.runcommandSubject.next(command);
-    console.log(command);
+    this.runcommandService.runCommand(command)
+      .subscribe(data => this.result = data);
   }
 }

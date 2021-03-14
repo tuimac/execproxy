@@ -16,9 +16,8 @@ export class RuncommandService {
 
   runCommand(command: String): Observable<Runcommand> {
     console.log(this.baseurl);
-    return this.http.post<Runcommand>(
-      `${this.baseurl}/runcommand`,
-      command
+    return this.http.get<Runcommand>(
+      `${this.baseurl}/runcommand?command=${command}`,
     ).pipe(
       map(data => {
         console.log(data['body']);

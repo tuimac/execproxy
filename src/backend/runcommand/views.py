@@ -12,12 +12,13 @@ class RunCommandAPIViews(views.APIView):
 
     renderer_classes = [JSONRenderer]
 
-    def get(self, request, command, format=None):
+    def get(self, request, format=None):
         try:
-            if command == '':
-                return Respose({'message': 'Not allowed empty request.'}, status=status.HTTP_400_BAD_REQUEST)
+            command_param = self.request.query_params.get('command')
+            if command_param == '':
+                return Respose({'message': 'Invalid query request.'}, status=status.HTTP_400_BAD_REQUEST)
             rc = RunCommand()
-            response = rc.run(command)
+            response = rc.run(command_param)
             return Response(response, status=status.HTTP_200_OK)
         except Exception as e:
             message = traceback.format_exc()
