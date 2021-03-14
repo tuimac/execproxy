@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Runcommand } from '../../models';
-import { Subject, Observable } from 'rxjs';
+import { Subject } from 'rxjs';
 import { RuncommandService } from '../../services';
 
 @Component({
@@ -22,5 +22,6 @@ export class RuncommandComponent implements OnInit {
     if(!command) { return; }
     this.runcommandService.runCommand(command)
       .subscribe(data => this.result = data);
+    console.log(this.result);
   }
 }

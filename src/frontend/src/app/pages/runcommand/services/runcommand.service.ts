@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
-import { map, catchError } from 'rxjs/operators';
+import { map, catchError, retry } from 'rxjs/operators';
 import { Runcommand } from '../models';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
@@ -14,18 +14,28 @@ export class RuncommandService {
 
   constructor(private http: HttpClient) {}
 
-  runCommand(command: String): Observable<Runcommand> {
+  runCommand(command: string): Observable<Runcommand> {
     console.log(this.baseurl);
-    return this.http.get<Runcommand>(
-      `${this.baseurl}/runcommand?command=${command}`,
-    ).pipe(
-      map(data => {
-        console.log(data['body']);
-        return data['body'];
-      }),
-      catchError(error => {
-        return throwError('Runcommand: There is some error.');
+
+    const headers = {
+      header: new HttpHeaders({
+        'Content-Type': 'application/json'
       })
+    };
+
+    const options = {
+      params: new HttpParams().set('command', command)
+    };
+
+    return this.http.get<Runcommand>(
+      `${this.baseurl}/runcommand`,
+      options,
+    ).pipe(
+      retry(3),
+      catchError(this.handleError)
     );
+  }
+  handleError(handleError: any): import("rxjs").OperatorFunction<Runcommand, any> {
+    throw new Error('Method not implemented.');
   }
 }
