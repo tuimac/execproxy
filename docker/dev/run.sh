@@ -14,13 +14,9 @@ function runContainer(){
                 -p 80:4200 \
                 -p 8000:8000 \
                 -v /:/host \
-                -v /etc/group:/etc/group:ro \
-                -v /etc/passwd:/etc/passwd:ro \
                 -e HOST_MOUNTED_DIR=/host \
                 --privileged \
-                --net host \
                 --pid host \
-                --ipc host \
                 ${NAME}
 }
 
