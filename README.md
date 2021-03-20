@@ -28,7 +28,7 @@ How can you execute os shell command through docker? This is the why. Execproxy 
 
 * **Kento Kashiwagi** - [tuimac](https://github.com/tuimac)
 
-If you have some opinions and find bugs, please post [here](https://github.com/tuimac/openvpn/issues).
+If you have some opinions and find bugs, please post [here](https://github.com/tuimac/execproxy/issues).
 
 ## License
 
