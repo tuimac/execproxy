@@ -88,7 +88,7 @@ jobs:
       - run:
           name: Build and Push docker image to Docker Hub
           working_directory: docker/build
-          command: docker buildx build --platform linux/amd64,linux/arm64 -t ${DOCKER_USERNAME}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1} --push .
+          command: docker buildx build --platform linux/amd64,linux/arm64 -t ${DOCKER_USERNAME}/${CIRCLE_PROJECT_REPONAME} --push .
 workflows:
   version: 2.1
   execproxy-pipeline:
