@@ -22,7 +22,7 @@ You must set `v /:/host --privileged --pid host -e HOST_MOUNTED_DIR-/host`. Ther
 ## Technology
 How can you execute os shell command through docker? This is the why. Execproxy docker container share PID with host OS. Of course, the container need docker privilege when you create the container. Execproxy's backend is written in Python which throw the command get from frontend REST API to the shell. But before do that, that application execute `chroot /host` which `/host` is mounted on host OS `/`. That's why Execproxy on docker container can execute the host OS command.
 
-![execproxy-architechture](https://user-images.githubusercontent.com/18078024/111859480-a0b77c80-8984-11eb-9468-cd12949e4e98.png)
+![execproxy-architecture](https://user-images.githubusercontent.com/18078024/111866689-9a3ff980-89b2-11eb-8b95-2043298d06d0.png)
 
 ## Authors
 
